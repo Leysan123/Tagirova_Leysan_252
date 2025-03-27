@@ -1,0 +1,174 @@
+/* Общие стили */
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #edf4fc;
+}
+
+main {
+    padding: 50px 70px;
+    flex: 1;
+}
+
+header {
+    padding: 5px 70px;
+    background-color: #2f80ec;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: white !important;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Форма добавления задачи */
+.add-task {
+    width: 450px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Поле ввода */
+.add-task input {
+    flex: 1;
+    border: 1px solid #e3e6e8;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.add-task input::placeholder {
+    color: rgba(108, 117, 125, 0.6);
+}
+
+/* Кнопка добавления */
+.add-task button {
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    background: linear-gradient(to right, #3498db, #2c6cb1);
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.add-task button:hover {
+    background: linear-gradient(to right, #2c6cb1, #1f4b8f);
+    transform: translateY(-2px);
+}
+
+/* Доска задач */
+.taskboard {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* Колонки задач */
+.tasks-list {
+    flex: 1;
+    min-width: 280px;
+    
+    border-radius: 8px;
+    padding: 15px;
+    display: inline-block;
+    list-style: none;
+    flex-direction: column;
+   
+}
+
+/* Заголовки колонок */
+.tasks-list h2 {
+    background: #4087de;
+    padding: 10px;
+    border-radius: 6px;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Карточка задачи */
+.task {
+    padding: 12px;
+    background-color: #f3e5e5;
+    border-radius: 8%;
+    border-left: 2px solid;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin: 10px;
+
+}
+
+/* Цвета для задач в зависимости от статуса */
+.backlog .task-item {
+    border-left-color: #e3e3e3;
+}
+
+.in-progress .task-item {
+    border-left-color: #d6e6fd;
+}
+
+.done .task-item {
+    border-left-color: #d7f9e0;
+}
+
+.trash .task-item {
+    border-left-color: #fbe3e3;
+}
+
+/* Стили заголовков колонок */
+.backlog h2 {
+    background-color: #e3e3e3;
+    color: #b3b3b3;
+}
+
+.in-progress h2 {
+    background-color: #d6e6fd;
+    color: #467bd5;
+}
+
+.done h2 {
+    background-color: #d7f9e0;
+    color: #87c488;
+}
+
+.trash h2 {
+    background-color: #fbe3e3;
+    color: #ce7885;
+}
+
+/* Кнопка очистки корзины */
+.clear-btn .btn-primary {
+    background-color: #b25757;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.clear-btn .btn-primary:hover {
+    background-color: #a04545;
+}
